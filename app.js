@@ -8,10 +8,15 @@ function sortear(){
 
   for(i = 0 ; i < quantidade ; i++){
     numero = obterNumeroAleatorio(doNumero,ateNumero);
+
+    while(sorteados.includes(numero)){
+      numero = obterNumeroAleatorio(doNumero,ateNumero);
+    }
     sorteados.push(numero);
   }
 
-  alert(sorteados);
+  let resultado = document.getElementById('resultado');
+  resultado.innerHTML = `<label class="texto__paragrafo">Números sorteados: ${sorteados}</label>`;
 
   
 }
