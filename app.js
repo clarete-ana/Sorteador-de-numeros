@@ -29,6 +29,7 @@ function reiniciar(){
 
   let resultado = document.getElementById('resultado');
   resultado.innerHTML = `<label class="texto__paragrafo">Números sorteados: nenhum até agora</label>`
+  alterarStatusBotao();
 }
 
 function obterNumeroAleatorio(min,max){
