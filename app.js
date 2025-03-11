@@ -2,7 +2,16 @@ function sortear(){
   let quantidade = document.getElementById('quantidade').value;
   let doNumero = parseInt(document.getElementById('de').value);
   let ateNumero = parseInt(document.getElementById('ate').value);
+
+  if (doNumero >= ateNumero){
+    alert('O valor do campo "De" deve ser menor que o do campo "Até". Tente novamente!')
+  }
   
+  let totalPossibilidades = ateNumero - doNumero + 1 ;
+
+  if (quantidade > totalPossibilidades){
+    alert(`Não é possível sortear números aleatórios no intervalo de ${doNumero} até ${ateNumero} sem repetir`);
+  }
   let sorteados = [];
   let numero;
 
